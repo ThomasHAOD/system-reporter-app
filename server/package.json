@@ -1,0 +1,14 @@
+{
+  "name": "system-reporter-server",
+  "version": "1.0.0",
+  "description": "A node server which gets information about a user's system and makes it available for consumption by attached client",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
