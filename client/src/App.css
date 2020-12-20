@@ -1,0 +1,10 @@
+.App {
+  margin: 1rem;
+  color: blue;
+}
+
+h1 {
+  padding: 10rem;
+  background-color: rgb(243, 188, 117);
+  box-sizing: border-box;
+}
