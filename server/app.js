@@ -14,7 +14,7 @@ const server = http.createServer((req, res) => {
   res.setHeader('test-header', 'testing');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', '*');
-
+  res.write(data);
   res.end();
 });
 

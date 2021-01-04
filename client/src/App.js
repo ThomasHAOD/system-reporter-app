@@ -7,6 +7,9 @@ const App = () => {
       method: 'POST',
       headers: { Authorization: 'Bearer asdflkjasdf' },
       body: JSON.stringify({ message: 'Hello World' }),
+    }).then((res) => {
+      const reader = res.body.getReader();
+      console.log(reader);
     });
   };
 
