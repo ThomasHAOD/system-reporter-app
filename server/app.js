@@ -3,13 +3,11 @@ const http = require('http');
 const port = 3000;
 
 const server = http.createServer((req, res) => {
-  let data = JSON.stringify({ message: 'Hello World' });
-  req.on('data', (chunk) => {
-    data = chunk;
+  let data = JSON.stringify({
+    message: 'Loaded at',
+    time: new Date().getSeconds(),
   });
-  req.on('end', () => {
-    console.log(JSON.parse(data));
-  });
+
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', '*');
   res.setHeader('Content-Type', 'application/json');

@@ -23,3 +23,11 @@ I needed to add the @babel/polyfill setting/plugin to the project, and now ES7 s
 ## Part 2: Websockets and Data Streams (`setup-websocket` branch)
 
 ### Day 2 (cont.)
+
+Web Sockets are too complex for me to set up without using a framework for the time being so shelving that approach for now.
+
+## Part 3: Websockets and Data Streams (`setup-autoupdate` branch)
+
+### Day 3 (cont.)
+
+Updated the front and backend to represent a timer ticking up (one update per second), from 1 to 60. Next step is to introduce the ram usage component.

@@ -24,7 +24,10 @@ module.exports = {
       },
     ],
   },
-  resolve: { extensions: ['*', '.js', '.jsx'] },
+  resolve: {
+    extensions: ['*', '.js', '.jsx'],
+    alias: { 'react-dom': '@hot-loader/react-dom' },
+  },
   devServer: {
     port: 3030,
     host: 'localhost',
