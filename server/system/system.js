@@ -5,11 +5,9 @@ const otherSystemInfo = () => {
 
   const systemUptime = system.uptime();
 
-  const uptimeInHours = systemUptime / 3600;
+  const uptimeInHours = (systemUptime / 3600).toFixed(2);
 
-  return `Your home directory is ${homeDirectory} and your system has been live for ${uptimeInHours.toFixed(
-    3
-  )} hours.`;
+  return { homeDirectory, uptimeInHours };
 };
 
 module.exports = otherSystemInfo;

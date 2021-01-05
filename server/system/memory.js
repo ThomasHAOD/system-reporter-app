@@ -11,13 +11,13 @@ const memoryInformation = () => {
     return memInGig.toFixed(2);
   };
 
-  const memoryUsage = (freeMemory / totalMemory) * 100;
+  const memoryUsage = 100 - freeMemory / totalMemory;
 
-  return `You have a total of ${memoryToGigabytes(
-    totalMemory
-  )}Gb of memory, ${memoryToGigabytes(
-    freeMemory
-  )}Gb of which are free - that's ${memoryUsage.toFixed(2)}%!`;
+  return {
+    total: memoryToGigabytes(totalMemory),
+    free: memoryToGigabytes(freeMemory),
+    usage: memoryUsage.toFixed(2),
+  };
 };
 
 module.exports = memoryInformation;

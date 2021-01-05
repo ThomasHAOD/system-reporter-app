@@ -15,6 +15,6 @@ const getAverageSpeed = () => {
 
 const averageSpeedInGHz = getAverageSpeed() / 1000;
 
-const cpuInformation = `You have ${numOfCpus} processors or cores runnning at an average of ${averageSpeedInGHz}GHz.`;
+const cpuInformation = { numOfCpus, averageSpeedInGHz };
 
 module.exports = cpuInformation;

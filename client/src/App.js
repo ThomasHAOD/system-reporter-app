@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import ProcessorDetails from '../components/ProcessorDetails';
+import RamUsage from '../components/RamUsage';
+import SystemDetails from '../components/SystemDetails';
 import './App.css';
 
 const App = () => {
@@ -27,12 +30,13 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className='App'>
       <h1>System Reporter</h1>
-      <h2>{memory}</h2>
-      <h2>{osInfo}</h2>
-      <h2>{processors}</h2>
-      <h2>{system}</h2>
+      <div className='data-container'>
+        <RamUsage memoryData={memory} />
+        <ProcessorDetails processorData={processors} />
+        <SystemDetails osDetails={osInfo} systemData={system} />
+      </div>
     </div>
   );
 };

@@ -16,6 +16,6 @@ const osRelease = os.release();
 
 const username = os.userInfo().username;
 
-const osInformation = `Your Operating System username is ${username}. Your current system is ${osName}, release ${osRelease}.`;
+const osInformation = { osName, osRelease, username };
 
 module.exports = osInformation;

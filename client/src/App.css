@@ -1,10 +1,45 @@
 .App {
   margin: 1rem;
-  color: blue;
+  color: rgb(53, 53, 53);
+  font-family: 'Courier New', Courier, monospace;
 }
 
 h1 {
-  padding: 10rem;
-  background-color: rgb(243, 188, 117);
+  padding: 1rem;
+  background-color: rgb(117, 186, 243);
   box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+}
+
+.info-container {
+  width: 100%;
+  text-align: left;
+  background-color: lightcyan;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.data-container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.processors-container {
+  width: fit-content;
+  height: fit-content;
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: darkgrey;
+}
+.processor {
+  background-color: black;
+  color: white;
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-items: center;
 }
