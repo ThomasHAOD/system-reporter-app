@@ -4,19 +4,15 @@ import './App.css';
 const App = () => {
   const [text, setText] = useState('First there was darkness, then...');
 
-  const helloFetch = () => {
-    fetch('http://localhost:3000/', {
+  const helloFetch = async () => {
+    const data = await fetch('http://localhost:3000/', {
       method: 'POST',
       headers: { Authorization: 'Bearer asdflkjasdf' },
       body: JSON.stringify({ message: 'Hello World' }),
-    })
-      .then((res) => {
-        return res.json();
-      })
-      .then((body) => {
-        console.log(body);
-        setText(body.message);
-      });
+    });
+    const body = await data.json();
+
+    setText(body.message);
   };
 
   return (
