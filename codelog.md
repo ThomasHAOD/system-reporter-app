@@ -13,3 +13,5 @@ Managed to set up a simple server with hello world getting from the front end to
 A fresh brain makes for good progress it would seem. Something weird is happening on creating a string when initially receiving data on the server, so sending it as a response is not parsable if sent straight back to the client. If I send back a stringified JSON object created on the back end that works fine. Puzzler, but at least I'm getting a hello world message on the front end too now.
 
 So...that problem is solved. Turned out adding chunks together is not a good idea if there is likely to be only one chunk. At least that seemed to solve the issue. The next question is why do the node docs (https://nodejs.dev/learn/get-http-request-body-data-using-nodejs) suggest basically this exact setup if it isn't going to work? Obviously I'm still missing a piece of the puzzle. Anyway, async/await doesn't work on the front end so that's the next thing I'll tackle, probably a webpack issue.
+
+I needed to add the @babel/polyfill setting/plugin to the project, and now ES7 syntax works a treat.
