@@ -37,3 +37,5 @@ Brought in the string generating functionality from the [system-reporter-cli](ht
 The final push to get the data displaying in the browser didn't present any significant challenge. Definitely not the prettiest, but this was supposed to be a bit of fun learning so that was achieved at least.
 
 Last thing I want to do is make a custom hook to tidy up app.js in the client a bit.
+
+Custom hook done and fixed a bug with the color of the ram usage bar, apparently switch statements aren't good for comparing more than one thing...duh.
