@@ -26,7 +26,7 @@ I needed to add the @babel/polyfill setting/plugin to the project, and now ES7 s
 
 Web Sockets are too complex for me to set up without using a framework for the time being so shelving that approach for now.
 
-## Part 3: Websockets and Data Streams (`setup-autoupdate` branch)
+## Part 3: Client, API and System Info (`main` branch)
 
 ### Day 2 (cont.)
 
