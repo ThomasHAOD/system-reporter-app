@@ -23,3 +23,5 @@ I needed to add the @babel/polyfill setting/plugin to the project, and now ES7 s
 ## Part 2: Websockets and Data Streams (`setup-websocket` branch)
 
 ### Day 2 (cont.)
+
+Websockets are too complicated to set up without frame works for now, so I'm going to move to timed get requests.
