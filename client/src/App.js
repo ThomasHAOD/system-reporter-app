@@ -5,10 +5,10 @@ import SystemDetails from '../components/SystemDetails';
 import './App.css';
 
 const App = () => {
-  const [memory, setMemory] = useState('not loaded');
-  const [osInfo, setOSinfo] = useState('not loaded');
-  const [processors, setProcessors] = useState('not loaded');
-  const [system, setSystem] = useState('not loaded');
+  const [memory, setMemory] = useState({});
+  const [osInfo, setOSinfo] = useState({});
+  const [processors, setProcessors] = useState({});
+  const [system, setSystem] = useState({});
 
   const helloFetch = async () => {
     const data = await fetch('http://localhost:3000/', {

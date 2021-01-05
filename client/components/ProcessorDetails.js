@@ -3,11 +3,14 @@ import React from 'react';
 const ProcessorDetails = ({ processorData }) => {
   const { numOfCpus, averageSpeedInGHz } = processorData;
 
-  const processor = <div className='processor'>{averageSpeedInGHz}</div>;
-
   const processors = [];
 
   for (let i = 0; i < numOfCpus; i++) {
+    const processor = (
+      <div className='processor' key={i}>
+        {averageSpeedInGHz}
+      </div>
+    );
     processors.push(processor);
   }
 

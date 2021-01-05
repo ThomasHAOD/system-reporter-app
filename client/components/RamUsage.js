@@ -12,7 +12,7 @@ const RamUsage = ({ memoryData }) => {
         Usage:
         <svg width='300' height='20' style={{ border: '1px solid black' }}>
           <rect
-            width={parseInt(usage) * 3}
+            width={parseFloat(usage) * 3 || 0}
             height='20'
             style={{ fill: `red` }}
           />
