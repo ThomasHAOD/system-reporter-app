@@ -29,7 +29,7 @@ module.exports = {
     alias: { 'react-dom': '@hot-loader/react-dom' },
   },
   devServer: {
-    port: 3030,
+    port: 3000,
     host: 'localhost',
     hot: true,
     open: true,

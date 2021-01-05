@@ -11,7 +11,7 @@ const memoryInformation = () => {
     return memInGig.toFixed(2);
   };
 
-  const memoryUsage = 100 - freeMemory / totalMemory;
+  const memoryUsage = 100 - (freeMemory / totalMemory) * 100;
 
   return {
     total: memoryToGigabytes(totalMemory),

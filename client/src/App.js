@@ -1,33 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import useSystemReporter from '../hooks/useSystemReporter';
 import ProcessorDetails from '../components/ProcessorDetails';
 import RamUsage from '../components/RamUsage';
 import SystemDetails from '../components/SystemDetails';
 import './App.css';
 
+const URL = 'http://localhost:8080';
+
 const App = () => {
-  const [memory, setMemory] = useState({});
-  const [osInfo, setOSinfo] = useState({});
-  const [processors, setProcessors] = useState({});
-  const [system, setSystem] = useState({});
-
-  const helloFetch = async () => {
-    const data = await fetch('http://localhost:3000/', {
-      method: 'get',
-      headers: { Authorization: 'Bearer asdflkjasdf' },
-    });
-    const body = await data.json();
-
-    setMemory(body.memory);
-    setOSinfo(body.osInfo);
-    setProcessors(body.processors);
-    setSystem(body.system);
-  };
-
-  useEffect(() => {
-    setInterval(() => {
-      helloFetch();
-    }, 1000);
-  }, []);
+  const { memory, osInfo, processors, system } = useSystemReporter(URL);
 
   return (
     <div className='App'>

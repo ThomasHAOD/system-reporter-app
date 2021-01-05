@@ -1,6 +1,6 @@
 const http = require('http');
 
-const port = 3000;
+const port = 8080;
 
 const memory = require('./system/memory');
 const osInfo = require('./system/os');
