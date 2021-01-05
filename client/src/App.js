@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
-  const [text, setText] = useState('not loaded');
-  const [time, setTime] = useState('First there was darkness, then...');
+  const [memory, setMemory] = useState('not loaded');
+  const [osInfo, setOSinfo] = useState('not loaded');
+  const [processors, setProcessors] = useState('not loaded');
+  const [system, setSystem] = useState('not loaded');
 
   const helloFetch = async () => {
     const data = await fetch('http://localhost:3000/', {
@@ -12,8 +14,10 @@ const App = () => {
     });
     const body = await data.json();
 
-    setText(body.message);
-    setTime(body.time);
+    setMemory(body.memory);
+    setOSinfo(body.osInfo);
+    setProcessors(body.processors);
+    setSystem(body.system);
   };
 
   useEffect(() => {
@@ -25,8 +29,10 @@ const App = () => {
   return (
     <div>
       <h1>System Reporter</h1>
-      <h2>{text}</h2>
-      <h2>{time}</h2>
+      <h2>{memory}</h2>
+      <h2>{osInfo}</h2>
+      <h2>{processors}</h2>
+      <h2>{system}</h2>
     </div>
   );
 };

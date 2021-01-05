@@ -31,3 +31,5 @@ Web Sockets are too complex for me to set up without using a framework for the t
 ### Day 3 (cont.)
 
 Updated the front and backend to represent a timer ticking up (one update per second), from 1 to 60. Next step is to introduce the ram usage component.
+
+Brought in the string generating functionality from the [system-reporter-cli](https://github.com/ThomasHAOD/system-reporter-cli) and adjusted it so the system uptime and RAM usage do indeed update. So now the app outputs updating strings. Now to make it look good.

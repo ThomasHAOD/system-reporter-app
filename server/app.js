@@ -2,10 +2,17 @@ const http = require('http');
 
 const port = 3000;
 
+const memory = require('./system/memory');
+const osInfo = require('./system/os');
+const processors = require('./system/processors');
+const system = require('./system/system');
+
 const server = http.createServer((req, res) => {
   let data = JSON.stringify({
-    message: 'Loaded at',
-    time: new Date().getSeconds(),
+    memory: memory(),
+    osInfo,
+    processors,
+    system: system(),
   });
 
   res.setHeader('Access-Control-Allow-Origin', '*');
