@@ -11,10 +11,10 @@ const server = http.createServer((req, res) => {
   req.on('end', () => {
     console.log(data);
   });
-  res.setHeader('test-header', 'testing');
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Headers', '*');
-  res.write(data);
+  res.setHeader('Content-Type', 'application/json');
+  res.write(JSON.stringify({ message: 'Hello World' }));
   res.end();
 });
 
