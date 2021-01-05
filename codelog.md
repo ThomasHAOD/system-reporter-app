@@ -7,3 +7,7 @@ In trying to set up React with webpack/babel for the first time I struggled to g
 ## Day 1
 
 Managed to set up a simple server with hello world getting from the front end to the back end and logged. Getting it returned is a nightmare...I have a feeling I'm getting into the world of buffers and streams of which I only have the highest of high level knowledge, my head hurts...job for tomorrow.
+
+## Day 2
+
+A fresh brain makes for good progress it would seem. Something weird is happening on creating a string when initially receiving data on the server, so sending it as a response is not parsable if sent straight back to the client. If I send back a stringified JSON object created on the back end that works fine. Puzzler, but at least I'm getting a hello world message on the front end too now.
